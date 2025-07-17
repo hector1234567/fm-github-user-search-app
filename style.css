@@ -21,6 +21,26 @@
   --Shadow: 0 1.6rem 3rem -1rem rgba(70, 96, 187, 0.1986);
 }
 
+:root:has(#theme:checked) {
+  color-scheme: light;
+  --background-body: var(--Neutral-100);
+  --background-container: var(--Neutral-0);
+  --heading-color: var(--Neutral-900);
+  --paragraph-color: var(--Neutral-500);
+  --link-color: var(--Blue-500);
+  --shadow: var(--Shadow);
+}
+
+:root:not(:has(#theme:checked)) {
+  color-scheme: dark;
+  --background-body: var(--Neutral-900);
+  --background-container: var(--Neutral-800);
+  --heading-color: var(--Neutral-0);
+  --paragraph-color: var(--Neutral-200);
+  --link-color: var(--Blue-300);
+  --shadow: none;
+}
+
 *,
 *::after,
 *::before {
@@ -32,26 +52,6 @@
 html {
   font-size: 62.5%;
   color-scheme: dark light;
-}
-
-[data-theme="light"] {
-  color-scheme: light;
-  --background-body: var(--Neutral-100);
-  --background-container: var(--Neutral-0);
-  --heading-color: var(--Neutral-900);
-  --paragraph-color: var(--Neutral-500);
-  --link-color: var(--Blue-500);
-  --shadow: var(--Shadow);
-}
-
-[data-theme="dark"] {
-  color-scheme: dark;
-  --background-body: var(--Neutral-900);
-  --background-container: var(--Neutral-800);
-  --heading-color: var(--Neutral-0);
-  --paragraph-color: var(--Neutral-200);
-  --link-color: var(--Blue-300);
-  --shadow: none;
 }
 
 body {
@@ -104,6 +104,10 @@ header label span {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+
+header label img {
+  height: 2rem;
 }
 
 form {
@@ -269,6 +273,14 @@ form button {
 .links a {
   text-decoration: none;
   color: inherit;
+}
+
+:root:has(#theme:checked) .light {
+  display: none;
+}
+
+:root:not(:has(#theme:checked)) .dark {
+  display: none;
 }
 
 @media (max-width: 768px) {
