@@ -175,6 +175,8 @@ form button {
   column-gap: 3.4rem;
   row-gap: 2.4rem;
   box-shadow: var(--shadow);
+
+  opacity: 0;
 }
 
 .avatar {
@@ -268,11 +270,54 @@ form button {
 
 .links svg {
   fill: var(--heading-color);
+  flex-shrink: 0;
 }
 
 .links a {
   text-decoration: none;
   color: inherit;
+}
+
+.not-found {
+  background-color: var(--background-container);
+  padding: 4.8rem;
+  border-radius: 1.6rem;
+  text-align: center;
+
+  display: none;
+}
+
+.not-found h2 {
+  font-size: 2.2rem;
+  font-weight: var(--Bold);
+  line-height: 140%;
+  color: var(--heading-color);
+  margin-bottom: 1.6rem;
+}
+
+.not-found p {
+  line-height: 150%;
+}
+
+.not-results-message {
+  color: var(--Red-500);
+  font-size: 1.6rem;
+  font-weight: var(--Bold);
+  line-height: 150%;
+
+  display: none;
+}
+
+body[data-notfound] .not-found {
+  display: block;
+}
+
+body[data-notfound] .result {
+  display: none;
+}
+
+body[data-notfound] .not-results-message {
+  display: block;
 }
 
 :root:has(#theme:checked) .light {
