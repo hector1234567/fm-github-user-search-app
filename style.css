@@ -400,4 +400,8 @@ body[data-notfound] .not-results-message {
     grid-column: 1/-1;
     grid-template-columns: 1fr;
   }
+
+  body[data-notfound] .not-results-message {
+    display: none;
+  }
 }
