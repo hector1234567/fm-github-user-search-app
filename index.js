@@ -10,7 +10,6 @@ const twitterEl = document.querySelector(".twitter");
 const blogEl = document.querySelector(".blog");
 const companyEl = document.querySelector(".company");
 
-const notResultsMessageEl = document.querySelector(".not-results-message");
 const searchEl = document.querySelector("#search");
 
 function renderData(data) {
