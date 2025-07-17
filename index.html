@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>GitHub user search app | Hector BG</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>devfinder</h1>
+        <div class="mode-switch">
+          Light <img src="/assets/icon-moon.svg" alt="Moon" />
+        </div>
+      </header>
+      <form>
+        <label for="search" aria-label="Search"
+          ><img src="/assets/icon-search.svg" alt="Search"
+        /></label>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search GitHub username..."
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div class="result">
+        <figure class="avatar">
+          <img src="/assets/avatar.png" alt="Avatar" />
+        </figure>
+      </div>
+      <div class="username">
+        <h2>The Octocat</h2>
+        <a href="#">@octocat</a>
+      </div>
+      <p class="joined">Joined 25 Jan 2011</p>
+      <p class="bio">This profile has no bio</p>
+      <ul class="stats">
+        <li>
+          <p class="stat__name">Repos</p>
+          <p class="stat__value">8</p>
+        </li>
+        <li>
+          <p class="stat__name">Followers</p>
+          <p class="stat__value">3938</p>
+        </li>
+        <li>
+          <p class="stat__name">Following</p>
+          <p class="stat__value">9</p>
+        </li>
+      </ul>
+      <ul class="links">
+        <li>
+          <img src="/assets/icon-location.svg" alt="Location" />San Francisco
+        </li>
+        <li>
+          <img src="/assets/icon-twitter.svg" alt="Twitter" />Not Available
+        </li>
+        <li>
+          <img src="/assets/icon-website.svg" alt="Website" /><a
+            href="https://github.blog"
+            >https://github.blog</a
+          >
+        </li>
+        <li><img src="/assets/icon-company.svg" alt="Company" />@github</li>
+      </ul>
+    </main>
+  </body>
+</html>
