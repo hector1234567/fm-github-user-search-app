@@ -135,6 +135,7 @@ form input {
   line-height: 140%;
   outline: none;
   cursor: pointer;
+  width: 100%;
 }
 
 form input::placeholder {
@@ -304,6 +305,7 @@ form button {
   font-size: 1.6rem;
   font-weight: var(--Bold);
   line-height: 150%;
+  text-wrap: nowrap;
 
   display: none;
 }
@@ -401,7 +403,7 @@ body[data-notfound] .not-results-message {
     grid-template-columns: 1fr;
   }
 
-  body[data-notfound] .not-results-message {
-    display: none;
+  .not-results-message {
+    display: none !important;
   }
 }
